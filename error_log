@@ -1303,3 +1303,45 @@
 [04-Mar-2016 08:08:53 UTC] PHP Warning:  getimagesize(users/assets/images/thumbs/left-a-most-beautiful-people-but-your-heart-stays-wilderness-south-africa1152_12849161836-tpfil02aw-): failed to open stream: No such file or directory in /home/mjedeveloper/public_html/gamma/models.php on line 281
 [04-Mar-2016 08:08:53 UTC] PHP Warning:  getimagesize(users/assets/images/medium/left-a-most-beautiful-people-but-your-heart-stays-wilderness-south-africa1152_12849161836-tpfil02aw-): failed to open stream: No such file or directory in /home/mjedeveloper/public_html/gamma/models.php on line 282
 [04-Mar-2016 08:08:53 UTC] PHP Warning:  getimagesize(users/assets/images/original/left-a-most-beautiful-people-but-your-heart-stays-wilderness-south-africa1152_12849161836-tpfil02aw-): failed to open stream: No such file or directory in /home/mjedeveloper/public_html/gamma/models.php on line 283
+[09-Mar-2016 03:36:00 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home/mjedeveloper/public_html/gamma/images.php on line 325
+[09-Mar-2016 03:39:54 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home/mjedeveloper/public_html/gamma/images.php on line 325
+[10-Mar-2016 09:39:12 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/mjedeveloper/public_html/gamma/images.php on line 394
+[10-Mar-2016 09:39:56 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/mjedeveloper/public_html/gamma/images.php on line 394
+[10-Mar-2016 09:40:08 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/mjedeveloper/public_html/gamma/images.php on line 394
+[10-Mar-2016 09:40:30 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/mjedeveloper/public_html/gamma/images.php on line 400
+[10-Mar-2016 09:47:19 UTC] PHP Parse error:  syntax error, unexpected '?>' in /home/mjedeveloper/public_html/gamma/images.php on line 337
+[10-Mar-2016 12:05:14 UTC] PHP Parse error:  syntax error, unexpected '?>' in /home/mjedeveloper/public_html/gamma/images.php on line 337
+[10-Mar-2016 18:51:42 UTC] PHP Parse error:  syntax error, unexpected '?>' in /home/mjedeveloper/public_html/gamma/images.php on line 337
+[10-Mar-2016 19:40:53 UTC] PHP Parse error:  syntax error, unexpected '?>' in /home/mjedeveloper/public_html/gamma/images.php on line 337
+[10-Mar-2016 19:41:34 UTC] PHP Parse error:  syntax error, unexpected '?>' in /home/mjedeveloper/public_html/gamma/images.php on line 337
+[10-Mar-2016 21:08:41 UTC] PHP Parse error:  syntax error, unexpected '?>' in /home/mjedeveloper/public_html/gamma/images.php on line 337
+[11-Mar-2016 04:04:44 UTC] PHP Parse error:  syntax error, unexpected '?>' in /home/mjedeveloper/public_html/gamma/images.php on line 337
+[11-Mar-2016 04:12:13 UTC] PHP Parse error:  syntax error, unexpected '?>' in /home/mjedeveloper/public_html/gamma/images.php on line 337
+[11-Mar-2016 06:37:02 UTC] PHP Parse error:  syntax error, unexpected '?>' in /home/mjedeveloper/public_html/gamma/images.php on line 337
+[14-Mar-2016 07:54:02 UTC] PHP Parse error:  syntax error, unexpected '?>' in /home/mjedeveloper/public_html/gamma/images.php on line 337
+[14-Mar-2016 08:30:06 UTC] PHP Parse error:  syntax error, unexpected '?>' in /home/mjedeveloper/public_html/gamma/images.php on line 337
+[14-Mar-2016 20:06:59 UTC] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/mjedeveloper/public_html/gamma/single.php:72) in /home/mjedeveloper/public_html/gamma/single.php on line 73
+[14-Mar-2016 20:17:43 UTC] PHP Warning:  getimagesize(users/assets/images/thumbs/No words.PNG): failed to open stream: No such file or directory in /home/mjedeveloper/public_html/gamma/search.php on line 165
+[14-Mar-2016 20:17:43 UTC] PHP Warning:  getimagesize(users/assets/images/medium/No words.PNG): failed to open stream: No such file or directory in /home/mjedeveloper/public_html/gamma/search.php on line 166
+[14-Mar-2016 20:17:43 UTC] PHP Warning:  getimagesize(users/assets/images/original/No words.PNG): failed to open stream: No such file or directory in /home/mjedeveloper/public_html/gamma/search.php on line 167
+[14-Mar-2016 20:17:43 UTC] PHP Warning:  filesize(): stat failed for users/assets/images/small/No words.PNG in /home/mjedeveloper/public_html/gamma/search.php on line 169
+[14-Mar-2016 20:17:43 UTC] PHP Warning:  filesize(): stat failed for users/assets/images/small/No words.PNG in /home/mjedeveloper/public_html/gamma/search.php on line 170
+[14-Mar-2016 20:17:43 UTC] PHP Warning:  filesize(): stat failed for users/assets/images/medium/No words.PNG in /home/mjedeveloper/public_html/gamma/search.php on line 171
+[14-Mar-2016 20:17:43 UTC] PHP Warning:  filesize(): stat failed for users/assets/images/original/No words.PNG in /home/mjedeveloper/public_html/gamma/search.php on line 172
+[14-Mar-2016 20:17:43 UTC] PHP Warning:  getimagesize(users/assets/images/thumbs/No words.PNG): failed to open stream: No such file or directory in /home/mjedeveloper/public_html/gamma/search.php on line 165
+[14-Mar-2016 20:17:43 UTC] PHP Warning:  getimagesize(users/assets/images/medium/No words.PNG): failed to open stream: No such file or directory in /home/mjedeveloper/public_html/gamma/search.php on line 166
+[14-Mar-2016 20:17:43 UTC] PHP Warning:  getimagesize(users/assets/images/original/No words.PNG): failed to open stream: No such file or directory in /home/mjedeveloper/public_html/gamma/search.php on line 167
+[14-Mar-2016 20:17:43 UTC] PHP Warning:  filesize(): stat failed for users/assets/images/small/No words.PNG in /home/mjedeveloper/public_html/gamma/search.php on line 169
+[14-Mar-2016 20:17:43 UTC] PHP Warning:  filesize(): stat failed for users/assets/images/small/No words.PNG in /home/mjedeveloper/public_html/gamma/search.php on line 170
+[14-Mar-2016 20:17:43 UTC] PHP Warning:  filesize(): stat failed for users/assets/images/medium/No words.PNG in /home/mjedeveloper/public_html/gamma/search.php on line 171
+[14-Mar-2016 20:17:43 UTC] PHP Warning:  filesize(): stat failed for users/assets/images/original/No words.PNG in /home/mjedeveloper/public_html/gamma/search.php on line 172
+[15-Mar-2016 06:08:53 UTC] PHP Parse error:  syntax error, unexpected '?>' in /home/mjedeveloper/public_html/gamma/images.php on line 337
+[15-Mar-2016 09:13:38 UTC] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/mjedeveloper/public_html/gamma/single.php:72) in /home/mjedeveloper/public_html/gamma/single.php on line 73
+[15-Mar-2016 09:24:28 UTC] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/mjedeveloper/public_html/gamma/single.php:72) in /home/mjedeveloper/public_html/gamma/single.php on line 73
+[15-Mar-2016 10:32:00 UTC] PHP Parse error:  syntax error, unexpected '?>' in /home/mjedeveloper/public_html/gamma/images.php on line 337
+[15-Mar-2016 18:06:28 UTC] PHP Parse error:  syntax error, unexpected '?>' in /home/mjedeveloper/public_html/gamma/images.php on line 337
+[16-Mar-2016 13:30:05 UTC] PHP Parse error:  syntax error, unexpected '?>' in /home/mjedeveloper/public_html/gamma/images.php on line 337
+[16-Mar-2016 13:30:49 UTC] PHP Parse error:  syntax error, unexpected '?>' in /home/mjedeveloper/public_html/gamma/images.php on line 337
+[17-Mar-2016 08:12:28 UTC] PHP Parse error:  syntax error, unexpected '?>' in /home/mjedeveloper/public_html/gamma/images.php on line 337
+[17-Mar-2016 16:55:02 UTC] PHP Parse error:  syntax error, unexpected '?>' in /home/mjedeveloper/public_html/gamma/images.php on line 337
+[17-Mar-2016 18:55:15 UTC] PHP Parse error:  syntax error, unexpected '?>' in /home/mjedeveloper/public_html/gamma/images.php on line 337

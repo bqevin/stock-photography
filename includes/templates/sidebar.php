@@ -12,6 +12,10 @@
                           <i class="fa fa-dashboard"></i>
                           <span>Profile</span>
                       </a>
+                   <a href="edituser.php">
+                          <i class="fa fa-user"></i>
+                          <span>Edit</span>
+                      </a>
                   </li>
 
                   <li class="sub-menu">
@@ -29,11 +33,14 @@
                   <li class="sub-menu">
                       <a class="active" href="javascript:;" >
                           <i class="fa fa-cogs"></i>
-                          <span>Gallery</span>
+                          <span>Portfolio</span>
                       </a>
                       <ul class="sub">
 
-                          <li class="active"><a  href="gallery.html">Gallery</a></li>
+                          <li class="active"><a  href="gallery.php">Portfolio</a></li>
+                        <li class="active"><a  href="approved.php">Approved images</a></li>
+                        <li class="active"><a  href="disapproved.php">Disapproved images</a></li>
+
 
                       </ul>
                   </li>

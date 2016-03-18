@@ -16,6 +16,8 @@ require_once 'templates/header.php'; ?>
 <!-- compress version-->
 <script type="text/javascript" src="more/js/elastic_grid.min.js"></script>
     <style type="text/css" media="screen">
+select.form-control{width:120px !important;
+                    height:30px;}
       span.hr{
         //border-bottom: 1px solid #171717;
     padding-top: 8px;
@@ -33,8 +35,8 @@ require_once 'templates/header.php'; ?>
         border: 2px solid #fff;
         border-radius: 5px;
     }
-    #side{margin-left:270px;}
-  #side2{margin-left:100px;}
+     #side{margin-left:570px;}
+  #side2{margin-left:10px;}
       #submit{
   margin-left:-5px;
   border-radius:5px;
@@ -44,17 +46,23 @@ require_once 'templates/header.php'; ?>
   height:50px;
   border:none !important;
   } 
+  .related_photo{width: 85%}
+  i.fa{margin-left: 10px !important; padding-top: 15px !important;}
+.elastislide-horizontal{
+    padding: 0px;
+}
+.og-grid li>a img{border:none;}
 
     </style>
 </head>
 <body style="background:#fff;">
 <div class="top_right">
-    <h1><a href="index.php"><img class="logo" src="assets/img/logo.png" alt=""></a></h1>
+    
     <ul>
-        <li id="side2"><a href="images.php">Find Images </a>|</li>
-        <li><a href="models.php">Find Models</a>|</li>
-        <li><a href="photography.php">Find Photographers</a>|</li>
-        <li><a href="mua.php">Find MUA</a>|</li>
+        <li id="side2"><a href="images.php"> Images </a>|</li>
+        <li><a href="models.php"> Models</a>|</li>
+        <li><a href="photography.php"> Photographers</a>|</li>
+        <li><a href="mua.php"> MUA</a>|</li>
         <li id="side" <?php echo @$page_title == "Cart" ? "class='active'" : ""; ?> >
             <a href="templates/cart.php">
                 <?php
@@ -78,8 +86,9 @@ require_once 'templates/header.php'; ?>
 </div>
     <!--/ Top bar-->
     <div class="clearfix"></div>
-    <br><br><br>
+    
     <header>
+<h1><a href="index.php"><img class="logo" src="assets/img/logo.png" alt=""></a></h1>
         <form id="mailing" name="mailinglist" method="post">
             <center>
                 <div class="ui-widget">
@@ -90,6 +99,92 @@ require_once 'templates/header.php'; ?>
             </center>
         </form>
 </header>
+  <div class="stock_box">
+  <form name="contactus" method="post">
+
+  <div class="col-md-2 stock_left">
+
+      <section class="sky-form">
+        <h4>Models</h4>
+        <div class="col col-4">
+          <div class="col col-4">
+            <select name="search_gender" id="gender" class="form-control">
+              <option>Any</option>
+              <option>male</option>
+              <option>Female</option>
+            </select>
+          </div><br><br>
+      </section>
+      <section class="sky-form">
+      <h4>Nationality</h4>
+      <div class="col col-4">
+      <select name="search_nationality"  class="form-control">
+      <option>All</option>
+      <option>kenyan</option>
+      <option>East African</option>
+      <option>Afican</option>
+      <option>European</option>
+      <option>Other</option> 
+      </select>
+      </div><br><br>
+      </section>
+      <section class="sky-form">
+      <h4> Hair Colour</h4>
+      <div class="col col-4">
+      <select name="search_country"  class="form-control">
+      <option value="">Any </option>
+      <option value="2">Afro-carribean</option>
+      <option value="3">Red</option>
+      <option value="4">Brunnete</option>
+      <option value="5">Other</option>
+      </select>
+      </div><br><br>
+      </section>
+      <section class="sky-form">
+      <h4>Age</h4>
+      <div class="col col-4">
+      <select name="search_age" class="form-control">
+      <option value="">5 - 10</option>
+      <option value="2">11 - 20</option>
+      <option value="3">21 - 30</option>
+      <option value="4">31 - 40</option>
+      <option value="5">41 - 50</option>
+      <option value="5">51 - 60</option>                    
+      </select>
+      </div><br><br>
+      <section class="sky-form">
+      <h4>Height</h4>
+      <div class="col col-4">
+      <select name="search_height"  class="form-control">
+      <option value="">30 - 40</option>
+      <option value="2">41 - 50</option>
+      <option value="3">51 - 60</option>
+      <option value="4">61 - 70</option> 
+      <option value="5">71 - 80</option>
+      </select>
+      </div>  <br><br>
+      </section>
+      <section class="sky-form">
+      <h4>Waist</h4>
+      <div class="col col-4">
+      <select name="search_waist"  class="form-control">
+      <option value="">30 - 40</option>
+      <option value="2">41 - 50</option>
+      <option value="3">51 - 60</option>
+      <option value="4">61 - 70</option>
+      <option value="5">71 - 80</option>
+      </select>
+      </div>   
+    </section>
+       <input type="submit" name="contact-submit" value="Search" />
+
+  </div>
+  </div>
+
+</form>
+
+  </div>
+  </div>
 <div id="elastic_grid_demo"></div>
 
 <script type="text/javascript">
@@ -152,8 +247,8 @@ require_once 'templates/header.php'; ?>
                             $width_large = $test_large[0];
                             $height_large = $test_large[1];
                             $image_category = '';
-                            $sql_zcard = "SELECT * FROM users WHERE email LIKE  '%$copywrite%' ";
-                            $sql_similar = "SELECT * FROM images WHERE  author  LIKE '%$copywrite%' AND genre LIKE 'models'";
+                            $sql_zcard = "SELECT * FROM users WHERE email = '$copywrite' ";
+                            $sql_similar = "SELECT * FROM images WHERE  author  = '$copywrite' AND genre = 'models'";
                             if ($result_two = mysql_query($sql_zcard, $link)) {
                                 if (mysql_num_rows($result_two) > 0) {
                                     while ($row_two = mysql_fetch_array($result_two)) {
@@ -171,12 +266,13 @@ require_once 'templates/header.php'; ?>
                                         $image_zcard = $file_path_thumb.$row_three['url'];
                                         $myArray .= "src = $image_zcard";
                                         $zcard = $arr[] = $myArray;
+                                        
                                     }
                                 }
                             }
                             ?>
                                 {
-                    'title'         : '<?php echo @$title ?>',
+                    'title'         : '<?php echo $image_zcard ?>',
                     'description'   : 'Copyright: <?php echo @$copywrite ?> (<?php echo @$category ?>)<br>Height: <?php echo @$height_m ?>" | Gender: <?php echo @$gender ?> | Country: <?php echo @$country ?> | Eye: <?php echo @$eye ?> | Twitter: <?php echo @$twitter ?> | City: <?php echo @$city ?>| Shoe: <?php echo @$shoe ?><br><span class="hr"idth_medi><input type="radio" name="size"> Small Dimensions: <?php echo $width ?> X <?php echo $height ?> px </span><br><span class="hr"><input type="radio" name="size" checked="checked"> Medium Dimensions: <?php echo $width_medium ?> X <?php echo $height_medium ?> px </span><br> <span class="hr"><input type="radio" name="size"> Large Dimensions: <?php echo $width_large ?> X <?php echo $height_large ?> px </span>',
                     'thumbnail'     : ['<?php echo $src ?>','<?php echo $src ?>'],
                     'large'         : ['<?php echo $src_water ?>','<?php echo $src_water ?>'],
@@ -220,8 +316,8 @@ require_once 'templates/header.php'; ?>
                             $width_large = $test_large[0];
                             $height_large = $test_large[1];
                             $image_category = '';
-                            $sql_zcard = "SELECT * FROM users WHERE email LIKE  '%$copywrite%' ";
-                            $sql_similar = "SELECT * FROM images WHERE  author  LIKE '%$copywrite%' AND genre LIKE 'models'";
+                            $sql_zcard = "SELECT * FROM users WHERE email =  '$copywrite' ";
+                            $sql_similar = "SELECT * FROM images WHERE  author  = '$copywrite' AND genre = 'models'";
                             if ($result_two = mysql_query($sql_zcard, $link)) {
                                 if (mysql_num_rows($result_two) > 0) {
                                     while ($row_two = mysql_fetch_array($result_two)) {
@@ -243,7 +339,7 @@ require_once 'templates/header.php'; ?>
                             }
                             ?>
                                  {
-                    'title'         : '<?php echo @$title ?>',
+                    'title'         : '<?php echo "fuck u" ?>',
                     'description'   : 'Copyright: <?php echo @$copywrite ?> (<?php echo @$category ?>)<br>Height: <?php echo @$height_m ?>" | Gender: <?php echo @$gender ?> | Country: <?php echo @$country ?> | Eye: <?php echo @$eye ?> | Twitter: <?php echo @$twitter ?> | City: <?php echo @$city ?>| Shoe: <?php echo @$shoe ?><br><span class="hr"idth_medi><input type="radio" name="size"> Small Dimensions: <?php echo $width ?> X <?php echo $height ?> px </span><br><span class="hr"><input type="radio" name="size" checked="checked"> Medium Dimensions: <?php echo $width_medium ?> X <?php echo $height_medium ?> px </span><br> <span class="hr"><input type="radio" name="size"> Large Dimensions: <?php echo $width_large ?> X <?php echo $height_large ?> px </span>',
                     'thumbnail'     : ['<?php echo $src ?>','<?php echo $src ?>'],
                     'large'         : ['<?php echo $src_water ?>','<?php echo $src_water ?>'],
@@ -288,8 +384,8 @@ require_once 'templates/header.php'; ?>
                             $height_medium = $test_medium[1];
                             $width_large = $test_large[0];
                             $height_large = $test_large[1];
-                            $sql_zcard = "SELECT * FROM users WHERE email LIKE  '%$copywrite%' ";
-                            $sql_similar = "SELECT * FROM images WHERE  author  LIKE '%$copywrite%' AND genre LIKE 'models' ";
+                            $sql_zcard = "SELECT * FROM users WHERE email =  '$copywrite' ";
+                            $sql_similar = "SELECT * FROM images WHERE  author  = '$copywrite' AND genre = 'models' ";
                             if ($result_two = mysql_query($sql_zcard, $link)) {
                                 if (mysql_num_rows($result_two) > 0) {
                                     while ($row_two = mysql_fetch_array($result_two)) {
@@ -314,6 +410,7 @@ require_once 'templates/header.php'; ?>
                                     $myArray = '';
                                     while ($row_three = mysql_fetch_array($result_three)) {
                                         $image_zcard = $file_path_thumb . $row_three['url'];
+                                                          //    echo $image_zcard ;
                                         $myArray .= $image_zcard;
                                         $zcard = $arr[] = $myArray;
                                     }
@@ -321,14 +418,14 @@ require_once 'templates/header.php'; ?>
                             }
                             ?>
                                                 {
-                    'title'         : '<?php echo @$title ?>',
-                    'description'   : 'Copyright: <?php echo @$copywrite ?> (<?php echo @$category ?>)<br>Height: <?php echo @$height_m ?>" | Gender: <?php echo @$gender ?> | Country: <?php echo @$country ?> | Eye: <?php echo @$eye ?> | Twitter: <?php echo @$twitter ?> | City: <?php echo @$city ?>| Shoe: <?php echo @$shoe ?><br><span class="hr"idth_medi><input type="radio" name="size"> Small Dimensions: <?php echo $width ?> X <?php echo $height ?> px </span><br><span class="hr"><input type="radio" name="size" checked="checked"> Medium Dimensions: <?php echo $width_medium ?> X <?php echo $height_medium ?> px </span><br> <span class="hr"><input type="radio" name="size"> Large Dimensions: <?php echo $width_large ?> X <?php echo $height_large ?> px </span>',
+                    'title'         : '<?php echo @$copywrite ?>',
+                    'description'   : 'Height: <?php echo @$height_m ?>" | Gender: <?php echo @$gender ?> | Country: <?php echo @$country ?> | Eye: <?php echo @$eye ?> | Twitter: <?php echo @$twitter ?> | City: <?php echo @$city ?>| Shoe: <?php echo @$shoe ?><br><i class="fa fa-heart fa-lg"></i><i class="fa fa-film fa-lg"></i><i class="fa fa-print fa-lg"></i><i class="fa fa-thumbs-o-up fa-lg"></i> ',
                     'thumbnail'     : ['<?php echo $src ?>','<?php echo $src ?>'],
                     'large'         : ['<?php echo $src_water ?>','<?php echo $src_water ?>'],
                     'button_list'   :
                     [
-                        { 'title':'Hire Model', 'url' : '#', 'new_window' : true },
-                        { 'title':'Inquire', 'url':'#', 'new_window' : false}
+                        { 'title':'Casting Call', 'url' : '#', 'new_window' : true },
+                        { 'title':'Hire Model', 'url':'#', 'new_window' : false}
                     ],
                     'tags'          : ['<?php echo $tags ?>']
                 },

@@ -1,5 +1,5 @@
               <form class="form-login" action="uploaded.php" method="post" enctype="multipart/form-data">
-                          <h2 class="form-login-heading">Upload Image</h2>
+                          <h2 class="form-login-heading">Contributor Upload Image</h2>
                   <div class="login-wrap">
 
                       <input type="text" name="title"  class="form-control" placeholder="Image Title" required/>
@@ -8,17 +8,10 @@
                       <input type="number" name="price"  class="form-control" placeholder="Image Price" required>
                       <input type="hidden" name="genre"  value="stock" >
                               <br>
-                      <label for="sel1">licence</label>
-                      <select name="category" class="form-control" id="sel1">
-                              <option>Editorial</option>
-                               <option>Rights Managed</option>
-                               <option>Royalty Free</option>
-                      </select>
-                              <br>
+                    
                   
 
-                      release form<input type="file" name="release"  class="form-control" placeholder="release Form" autofocus required>
-                              <br>
+    
 
                       select image<input type="file" name="image_file" class="form-control" placeholder="Image Location" autofocus required>
                               <br>

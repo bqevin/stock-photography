@@ -14,6 +14,7 @@ font-size:20px;
 div.main{height:700px;
 	text-align:center;
 }
+div.top_right{border:none !important ;background:none !important;}
 #side{margin-left:270px;}
   #side2{margin-left:100px;}
 </style>

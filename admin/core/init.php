@@ -11,7 +11,7 @@ session_start();
  */
 $GLOBALS['config'] = array(
     'mysql' => array(
-        'host' => 'ivertiseafrica.com',
+        'host' => 'localhost',
         'username' => 'mjedevel_kev',
         'password' => 'Token2016',
         'db' => 'mjedevel_ia'

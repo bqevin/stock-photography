@@ -13,6 +13,17 @@ $(function() {
     });
 });
 
+$( document ).ready(function() {
+      $("#upload").click(function(){
+
+        setTimeout(function(){
+            $("#dynamic").load("load/uploadm.php"); 
+        }, 3000);
+        $("#dynamic").load("load/loading.html");
+         
+      });
+      });
+
 var Script = function () {
 
 

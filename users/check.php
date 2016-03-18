@@ -68,6 +68,10 @@ if ($user->isLoggedIn()) { ?>
     #main-content {
     margin-left: 100px;
 }
+a:hover, a:focus {
+    color: #131313;
+    text-decoration: none;
+}
 .site-min-height {
     min-height: 400px;
 }
@@ -210,20 +214,27 @@ if ($user->isLoggedIn()) { ?>
 <br><br>
     <div class="row smpl-step" style="border-bottom: 0; min-width: 500px;">
         <div class="col-xs-3 smpl-step-step complete">
+            <div class="text-center smpl-step-num"><a href="contributor.php">Image Contributor</a></div>
+            <div class="progress">
+                <div class="progress-bar"></div>
+            </div>
+            <a class="smpl-step-icon"><i class="fa fa-image" style="font-size: 50px; padding-left: 5px; padding-top: 10px; color: #fff;"></i></a>
+            <div class="smpl-step-info text-center">Contribute your stock photos</div>
+        </div>
+        <div class="col-xs-3 smpl-step-step complete">
             <div class="text-center smpl-step-num"><a href="photography.php">Photographer</a></div>
             <div class="progress">
                 <div class="progress-bar"></div>
             </div>
-            <a class="smpl-step-icon"><i class="fa fa-camera" style="font-size: 55px; padding-left: 5px; padding-top: 10px; color: #fff;"></i></a>
+            <a class="smpl-step-icon"><i class="fa fa-camera" style="font-size: 50px; padding-left: 5px; padding-top: 10px; color: #fff;"></i></a>
             <div class="smpl-step-info text-center">Upload your creative shots for world to see</div>
         </div>
-
         <div class="col-xs-3 smpl-step-step complete">           
             <div class="text-center smpl-step-num"><a href="models.php">Model</a></div>
             <div class="progress">
                 <div class="progress-bar"></div>
             </div>
-            <a class="smpl-step-icon"><i class="fa fa-female" style="font-size: 60px; padding-left: 15px; padding-top: 5px; color: #fff;"></i></a>
+            <a class="smpl-step-icon"><i class="fa fa-female" style="font-size: 58px; padding-left: 15px; padding-top: 5px; color: #fff;"></i></a>
             <div class="smpl-step-info text-center">Get hired + create an online portfolio</div>
         </div>
         <div class="col-xs-3 smpl-step-step active">          
@@ -231,7 +242,7 @@ if ($user->isLoggedIn()) { ?>
             <div class="progress">
                 <div class="progress-bar"></div>
             </div>
-            <a class="smpl-step-icon"><i class="fa fa-edit" style="font-size: 55px; padding-left: 7px; padding-top: 11px; color: #fff;"></i></a>
+            <a class="smpl-step-icon"><i class="fa fa-edit" style="font-size: 50px; padding-left: 7px; padding-top: 11px; color: #fff;"></i></a>
             <div class="smpl-step-info text-center">Showcase your work on art of beauty</div>
         </div>
        <!--  <div class="col-xs-3 smpl-step-step disabled">           

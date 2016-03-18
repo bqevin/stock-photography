@@ -26,6 +26,7 @@ textarea{border:1px solid #177856 !important;
       background-color:white;
       color:black;
       }
+div.top_right{border:none !important ;background:none !important;}
       #side{margin-left:270px;}
   #side2{margin-left:100px;}
 </style>

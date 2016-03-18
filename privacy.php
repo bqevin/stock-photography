@@ -11,6 +11,7 @@ section.main{height:3800px;
 }
 #side{margin-left:270px;}
   #side2{margin-left:100px;}
+div.top_right{border:none !important ;background:none !important;}
 </style>
 </head>
 <body>

@@ -33,8 +33,8 @@ require_once 'templates/header.php'; ?>
         border: 2px solid #fff;
         border-radius: 5px;
     }
-    #side{margin-left:270px;}
-  #side2{margin-left:100px;}
+     #side{margin-left:570px;}
+  #side2{margin-left:10px;}
       #submit{
   margin-left:-5px;
   border-radius:5px;
@@ -43,13 +43,19 @@ require_once 'templates/header.php'; ?>
   width:50px;
   height:50px;
   border:none !important;
-  } 
+  }
+.related_photo{width: 85%}
+  i.fa{margin-left: 10px !important; padding-top: 15px !important;}
+.elastislide-horizontal{
+    padding: 0px;
+}
+.og-grid li>a img{border:none;} 
 
     </style>
 </head>
 <body style="background:#fff;">
 <div class="top_right">
-    <h1><a href="index.php"><img class="logo" src="assets/img/logo.png" alt=""></a></h1>
+    
     <ul>
         <li id="side2"><a href="images.php">Images </a>|</li>
         <li><a href="models.php">Models</a>|</li>
@@ -78,8 +84,9 @@ require_once 'templates/header.php'; ?>
 </div>
     <!--/ Top bar-->
     <div class="clearfix"></div>
-    <br><br><br>
+    
     <header>
+<h1><a href="index.php"><img class="logo" src="assets/img/logo.png" alt=""></a></h1>
         <form id="mailing" name="mailinglist" method="post">
             <center>
                 <div class="ui-widget">
@@ -90,6 +97,47 @@ require_once 'templates/header.php'; ?>
             </center>
         </form>
 </header>
+<div class="stock_box">
+      <div class="col-md-2 stock_left">
+        <div class="w_sidebar">
+          <section class="sky-form">
+            <h4>Assignment Photography</h4>
+            <div class="col col-4">
+              <label class="checkbox">
+                <input type="checkbox" name="checkbox" checked=""><i></i>All </label>
+            </div>
+            <div class="col col-4">
+              <label class="checkbox">
+                <input type="checkbox" name="checkbox"><i></i>Potrait</label>
+              <label class="checkbox">
+                <input type="checkbox" name="checkbox"><i></i>Product</label>
+           <label class="checkbox">
+                <input type="checkbox" name="checkbox"><i></i>Fashion</label>
+                <label class="checkbox">
+                <input type="checkbox" name="checkbox"><i></i>Event</label>
+                
+                <label class="checkbox">
+                <input type="checkbox" name="checkbox"><i></i>Conceptual</label>
+                <label class="checkbox">
+                <input type="checkbox" name="checkbox"><i></i>Fine Art</label>
+                <label class="checkbox">
+                <input type="checkbox" name="checkbox"><i></i>Sport</label>
+                <label class="checkbox">
+                <input type="checkbox" name="checkbox"><i></i>PhotoJournalism</label>
+                <label class="checkbox">
+                <input type="checkbox" name="checkbox"><i></i>Macro</label>
+                <label class="checkbox">
+                <input type="checkbox" name="checkbox"><i></i>Wildlife</label>
+                <label class="checkbox">
+                <input type="checkbox" name="checkbox"><i></i>Landscape</label>
+            </div>
+          </section>
+
+         
+        </div>
+      </div>
+
+
 <div id="elastic_grid_demo"></div>
 
 <script type="text/javascript">
@@ -312,14 +360,14 @@ require_once 'templates/header.php'; ?>
                             }
                             ?>
                                                 {
-                    'title'         : '<?php echo @$title ?>',
-                    'description'   : 'Copyright: <?php echo @$copywrite ?> (<?php echo @$category ?>)<br><span class="hr"><input type="radio" name="size"> Small Dimensions: <?php echo $width ?> X <?php echo $height ?> px </span><br><span class="hr"><input type="radio" name="size" checked="checked"> Medium Dimensions: <?php echo $width_medium ?> X <?php echo $height_medium ?> px </span><br> <span class="hr"><input type="radio" name="size"> Large Dimensions: <?php echo $width_large ?> X <?php echo $height_large ?> px </span><br>',
+                    'title'         : '<?php echo @$copywrite ?>',
+                    'description'   : 'Description: <?php echo @$title ?>',
                     'thumbnail'     : ['<?php echo $src ?>'],
                     'large'         : ['<?php echo $src_water ?>'],
                     'button_list'   :
                     [
-                        { 'title':'Hire Photographer', 'url' : '#', 'new_window' : true },
-                        { 'title':'Download', 'url':'#', 'new_window' : false}
+                        { 'title':'Hire Photographer', 'url' : '#', 'new_window' : true }
+                        // { 'title':'Download', 'url':'#', 'new_window' : false}
                     ],
                     'tags'          : ['<?php echo $tags ?>']
                 },

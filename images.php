@@ -33,8 +33,8 @@ require_once 'templates/header.php'; ?>
         border: 2px solid #fff;
         border-radius: 5px;
     }
-    #side{margin-left:270px;}
-  #side2{margin-left:100px;}
+    #side{margin-left:570px;}
+  #side2{margin-left:10px;}
       #submit{
   margin-left:-5px;
   border-radius:5px;
@@ -44,12 +44,25 @@ require_once 'templates/header.php'; ?>
   height:50px;
   border:none !important;
   } 
+.related_photo{
+    width: 95% !important;
+}
+.og-grid li>a, .og-grid li>a img{
+    border: 0px;
+}
+.og-details p {
+    padding-bottom: 0px;
+}
+.elastislide-horizontal{
+    padding: 0px;
+}
+.og-grid li>a img{border:none;}
+</style>
 
-    </style>
 </head>
 <body style="background:#fff;">
 <div class="top_right">
-    <h1><a href="index.php"><img class="logo" src="assets/img/logo.png" alt=""></a></h1>
+    
     <ul>
         <li id="side2"><a href="images.php">Images </a>|</li>
         <li><a href="models.php">Models</a>|</li>
@@ -70,6 +83,7 @@ require_once 'templates/header.php'; ?>
         <li><a href="users/login.php" id="loginButton"><i class="fa fa-user"></i> Log in</a>
         </li>
     </ul>
+
 </div>
 
 <!--/.nav-collapse -->
@@ -78,8 +92,9 @@ require_once 'templates/header.php'; ?>
 </div>
     <!--/ Top bar-->
     <div class="clearfix"></div>
-    <br><br><br>
+    
     <header>
+<h1><a href="index.php"><img class="logo" src="assets/img/logo.png" alt=""></a></h1>
         <form id="mailing" name="mailinglist" method="post">
             <center>
                 <div class="ui-widget">
@@ -96,7 +111,7 @@ require_once 'templates/header.php'; ?>
     $(function(){
         $("#elastic_grid_demo").elastic_grid({
             'showAllText' : 'All',
-            'filterEffect': 'popup', // moveup, scaleup, fallperspective, fly, flip, helix , popup
+            'filterEffect': 'scaleup', // moveup, scaleup, fallperspective, fly, flip, helix , popup
             'hoverDirection': true,
             'hoverDelay': 0,
             'hoverInverse': false,
@@ -141,6 +156,9 @@ require_once 'templates/header.php'; ?>
                             $src_water = $file_path_small . $start;
                             $src_medium = $file_path_medium . $start;
                             $src_large = $file_path_large . $start;
+                            $kbs = filesize($src_water);
+                            $kbm = filesize($src_medium);
+                            $kbl = filesize($src_large);
                             $src = $file_path_thumb . $start;
                             $test = getimagesize($file_path_thumb . $start);
                             $test_medium = getimagesize($file_path_medium . $start);
@@ -206,13 +224,14 @@ require_once 'templates/header.php'; ?>
                             $start = $row['url'];
                             $copywrite = $row['author'];
                             $description = $row['description'];
+                            $id = $row['id'];
                             $src_water = $file_path_small . $start;
                             $src_medium = $file_path_medium . $start;
                             $src_large = $file_path_large . $start;
                             $src = $file_path_thumb . $start;
-                            $test = getimagesize($file_path_thumb . $start);
-                            $test_medium = getimagesize($file_path_medium . $start);
-                            $test_large = getimagesize($file_path_large . $start);
+                            $test = get_dpi($file_path_thumb . $start);
+                            $test_medium = get_dpi($file_path_medium . $start);
+                            $test_large = get_dpi($file_path_large . $start);
                             $width = $test[0];
                             $height = $test[1];
                             $width_medium = $test_medium[0];
@@ -275,9 +294,14 @@ require_once 'templates/header.php'; ?>
                             $title = $row['title'];
                             $category = $row['category'];
                             $tags = $row['keywords'];
+                            $img_id = $row['id'];
+                            $pesa =$row['price']." KES";
                             $src_water = $file_path_small . $start;
                             $src_medium = $file_path_medium . $start;
                             $src_large = $file_path_large . $start;
+                            $kbs = filesize($src_water);
+                            $kbm = filesize($src_medium);
+                            $kbl = filesize($src_large);
                             $src = $file_path_thumb . $start;
                             $test = getimagesize($file_path_thumb . $start);
                             $test_medium = getimagesize($file_path_medium . $start);
@@ -302,24 +326,21 @@ require_once 'templates/header.php'; ?>
                             }
                             if ($result_three = mysql_query($sql_similar, $link)) {
                                 if (mysql_num_rows($result_three) > 0) {
-                                    $myArray = '';
                                     while ($row_three = mysql_fetch_array($result_three)) {
-                                        $image_zcard = $file_path_thumb . $row_three['url'];
-                                        $myArray .= $image_zcard;
-                                        $zcard = $arr[] = $myArray;
+                                        $image_zcard = $file_path_thumb.$row_three['url'];
                                     }
                                 }
                             }
                             ?>
                                                 {
                     'title'         : '<?php echo @$title ?>',
-                    'description'   : 'Copyright: <?php echo @$copywrite ?> (<?php echo @$category ?>)<br><span class="hr"><input type="radio" name="size"> Small Dimensions: <?php echo $width ?> X <?php echo $height ?> px </span><br><span class="hr"><input type="radio" name="size" checked="checked"> Medium Dimensions: <?php echo $width_medium ?> X <?php echo $height_medium ?> px </span><br> <span class="hr"><input type="radio" name="size"> Large Dimensions: <?php echo $width_large ?> X <?php echo $height_large ?> px </span><br>',
-                    'thumbnail'     : ['<?php echo $src ?>'],
-                    'large'         : ['<?php echo $src_water ?>'],
+                    'description'   : 'Copyright: <?php echo @$copywrite ?> <br>Image ID: <?php echo @$img_id ?><br>Keywords : <?php echo $tags ?><br>Licence: <?php echo $category ?><table class="table table-hover .table-condensed"><thead><tr><th><input type="radio" checked="checked" name="size"> Small</th><th><?php echo $width ?> X <?php echo $height ?> px <?php echo (DPI::getImageDpi($kbs)) ?></th><th><?php echo formatSizeUnits($kbs) ?></th><th><?php echo $pesa ?></th></tr></thead><tbody><tr><td><input type="radio" name="size"> Medium</td><td><?php echo $width_medium ?> X <?php echo $height_medium ?> px <?php echo (DPI::getImageDpi(getImageDpi($kbm)) ?></td><td><?php echo formatSizeUnits($kbm) ?></td><td><?php echo $pesa ?></td></tr><tr><td><input type="radio" name="size"> Large</td><td><?php echo $width_large ?> X <?php echo $height_large ?> px <?php echo DPI::getImageDpi(getImageDpi($kbl)) ?></td><td><?php echo formatSizeUnits($kbl) ?></td><td><?php echo $pesa ?></td></tr></tbody></table>',
+                    'thumbnail'     : ['<?php echo $src; ?>','<?php echo $src; ?>','<?php echo $src; ?>'],
+                    'large'         : ['<?php echo $src_water ?>','<?php echo $src_water ?>','<?php echo $src_water ?>'],
                     'button_list'   :
                     [
-                        { 'title':'Add to Cart', 'url' : '#', 'new_window' : true },
-                        { 'title':'Download', 'url':'#', 'new_window' : false}
+                        { 'title':'<i class="fa fa-download fa-lg"></i> Download', 'url' : '#', 'new_window' : true }
+                        // { 'title':'Download', 'url':'#', 'new_window' : false}
                     ],
                     'tags'          : ['<?php echo $tags ?>']
                 },
@@ -334,7 +355,38 @@ require_once 'templates/header.php'; ?>
             }
             // Close connection
             mysql_close($link);
+            //Format Unit sizes from here 
+            function formatSizeUnits($bytes)
+                {
+                    if ($bytes >= 1073741824)
+                    {
+                        $bytes = number_format($bytes / 1073741824, 2) . ' GB';
+                    }
+                    elseif ($bytes >= 1048576)
+                    {
+                        $bytes = number_format($bytes / 1048576, 2) . ' MB';
+                    }
+                    elseif ($bytes >= 1024)
+                    {
+                        $bytes = number_format($bytes / 1024, 2) . ' KB';
+                    }
+                    elseif ($bytes > 1)
+                    {
+                        $bytes = $bytes . ' bytes';
+                    }
+                    elseif ($bytes == 1)
+                    {
+                        $bytes = $bytes . ' byte';
+                    }
+                    else
+                    {
+                        $bytes = '0 bytes';
+                    }
 
+                    return $bytes;
+            }
+
+  
             ?>
             ]
         });

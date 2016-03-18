@@ -1,4 +1,3 @@
-
 *,
 *:after,
 *:before {
@@ -34,6 +33,7 @@
 
 .og-grid li {
 	display: inline-block;
+         border: 2px solid #808080 !important ;
 	margin: 10px 5px 0 5px;
 	vertical-align: top;
 	/*height: 250px;*/
@@ -45,7 +45,7 @@
 
 .og-grid li > a,
 .og-grid li > a img {
-	border: none;
+	border: 2px solid #808080 !important;
 	outline: none;
 	display: block;
 	position: relative;

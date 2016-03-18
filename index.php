@@ -2,12 +2,16 @@
   //session_start();
   
    require_once 'templates/header.php'; ?>
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 <link rel="stylesheet" type="text/css" href="less/css/demo.css" />
 <link rel="stylesheet" type="text/css" href="less/css/tabc.css" />
 <script src="//code.jquery.com/jquery-1.10.2.js"></script> 
 <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
 <style type="text/css"> 
   #submit{
   margin-left:-5px;
@@ -18,6 +22,7 @@
   height:45px;
   border:none !important;
   }
+
 li{list-style:none !important;}
   img.logo{border:0px;}
   img{border:0.2px solid gray;}
@@ -73,7 +78,7 @@ li{list-style:none !important;}
    
     font-size:15px !important;
   }
-  div.top_right{border:none !important ;}
+  div.top_right{border:none !important ;background:none !important;}
   div.tabs{padding:none!important;}
   /*body{width:1300px!important;}*/
 </style>
@@ -102,7 +107,7 @@ li{list-style:none !important;}
           </li>
         <li ><a><i id ="no"class="fa fa-phone">+254705825655</i></a></li>
         <li ><a href="register.php"><i class="fa fa-user-plus"></i> Sign  Up </a> </li>
-       <li ><a href="users/login.php" id="loginButton"><i class="fa fa-user"></i> Log  in</a>    
+       <li ><a href="..users/login.php" id="loginButton"><i class="fa fa-user"></i> Log  in</a>    
         </li>
       </ul>
     </div>
@@ -147,6 +152,7 @@ li{list-style:none !important;}
             <li><a href="#mua"><i class="fa fa-paint-brush"></i> <span>Make-Up Artists</span></a></li>
           </ul>
         </nav>
+
         <div class="content">
           <section id="stock">
 <?php
@@ -215,6 +221,7 @@ li{list-style:none !important;}
                     mysql_close($link);
                     ?>
           </section>
+
           <section id="photography">
  <?php
                   $link = mysql_connect("localhost", "mjedevel_kev", "Token2016");

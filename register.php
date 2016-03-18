@@ -90,6 +90,7 @@ input[type="text"],input[type="password"],input[type="email"]{
   
   
 }
+div.top_right{border:none !important ;background:none !important;}
 #side{margin-left:270px;}
   #side2{margin-left:100px;}
 .sn{margin-bottom:20px;

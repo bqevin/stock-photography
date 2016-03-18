@@ -13,6 +13,7 @@ div.body{
 	font-size:20px;
 	padding-bottom:200px;
 }
+div.top_right{border:none !important ;background:none !important;}
 #side{margin-left:270px;}
   #side2{margin-left:100px;}
 </style>
