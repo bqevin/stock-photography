@@ -12,7 +12,7 @@ session_start();
 $GLOBALS['config'] = array(
     'mysql' => array(
         'host' => 'localhost',
-        'username' => 'mjedevel_kev',
+        'username' => 'amn_stocker',
         'password' => 'Token2016',
         'db' => 'mjedevel_ia'
         ),

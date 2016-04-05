@@ -140,7 +140,7 @@ require_once 'templates/header.php'; ?>
             $sql = "SELECT * FROM images WHERE genre LIKE 'images'";
             $sql2 = "SELECT * FROM images WHERE keywords LIKE '$input' AND genre LIKE 'images' ";
             $sql3 = "SELECT * FROM images WHERE keywords='$gender' OR keywords='$nationality'  AND genre LIKE 'images' ";
-            if (!empty(@$_POST['model-submit'])) {
+            if (!empty($_POST['model-submit'])) {
                 if ($result = mysql_query($sql2, $link)) {
                     if (mysql_num_rows($result) > 0) {
                         while ($row = mysql_fetch_array($result)) {
@@ -213,7 +213,7 @@ require_once 'templates/header.php'; ?>
 
                     }
                 }
-            } else if (!empty(@$_POST['contact-submit'])) {
+            } else if (!empty($_POST['contact-submit'])) {
                 if ($result = mysql_query($sql3, $link)) {
                     if (mysql_num_rows($result) > 0) {
                         while ($row = mysql_fetch_array($result)) {
@@ -334,7 +334,12 @@ require_once 'templates/header.php'; ?>
                             ?>
                                                 {
                     'title'         : '<?php echo @$title ?>',
-                    'description'   : 'Copyright: <?php echo @$copywrite ?> <br>Image ID: <?php echo @$img_id ?><br>Keywords : <?php echo $tags ?><br>Licence: <?php echo $category ?><table class="table table-hover .table-condensed"><thead><tr><th><input type="radio" checked="checked" name="size"> Small</th><th><?php echo $width ?> X <?php echo $height ?> px <?php echo (DPI::getImageDpi($kbs)) ?></th><th><?php echo formatSizeUnits($kbs) ?></th><th><?php echo $pesa ?></th></tr></thead><tbody><tr><td><input type="radio" name="size"> Medium</td><td><?php echo $width_medium ?> X <?php echo $height_medium ?> px <?php echo (DPI::getImageDpi(getImageDpi($kbm)) ?></td><td><?php echo formatSizeUnits($kbm) ?></td><td><?php echo $pesa ?></td></tr><tr><td><input type="radio" name="size"> Large</td><td><?php echo $width_large ?> X <?php echo $height_large ?> px <?php echo DPI::getImageDpi(getImageDpi($kbl)) ?></td><td><?php echo formatSizeUnits($kbl) ?></td><td><?php echo $pesa ?></td></tr></tbody></table>',
+                    'description'   : 'Copyright: <?php echo @$copywrite ?>
+                     <br>Image ID: <?php echo @$img_id ?><br>Keywords : <?php echo $tags ?>
+                     <br>Licence: <?php echo $category ?><table class="table table-hover .table-condensed">
+                     <thead><tr><th><input type="radio" checked="checked" name="size"> Small</th>
+                     <th><?php echo $width ?> X <?php echo $height ?> px <?php echo (DPI::getImageDpi($kbs)) ?></th>
+      <th><?php echo formatSizeUnits($kbs) ?></th><th><?php echo $pesa ?></th></tr></thead><tbody><tr><td><input type="radio" name="size"> Medium</td><td><?php echo $width_medium ?> X <?php echo $height_medium ?> px <?php echo (DPI::getImageDpi(getImageDpi($kbm)) ?></td><td><?php echo formatSizeUnits($kbm) ?></td><td><?php echo $pesa ?></td></tr><tr><td><input type="radio" name="size"> Large</td><td><?php echo $width_large ?> X <?php echo $height_large ?> px <?php echo DPI::getImageDpi(getImageDpi($kbl)) ?></td><td><?php echo formatSizeUnits($kbl) ?></td><td><?php echo $pesa ?></td></tr></tbody></table>',
                     'thumbnail'     : ['<?php echo $src; ?>','<?php echo $src; ?>','<?php echo $src; ?>'],
                     'large'         : ['<?php echo $src_water ?>','<?php echo $src_water ?>','<?php echo $src_water ?>'],
                     'button_list'   :

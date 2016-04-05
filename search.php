@@ -126,9 +126,10 @@ require_once 'templates/header.php'; ?>
             <?php
               /* Attempt MySQL server connection. Assuming you are running MySQL
               server with default setting (user 'root' with no password) */
-              $link = mysql_connect("localhost", "mjedevel_kev", "Token2016");
-              
-              mysql_select_db( "mjedevel_ia", $link);
+              $link = mysql_connect("localhost", "amn_stocker", "Token2016");
+                                       
+             
+              mysql_select_db( "amn_stocker", $link);
               // Check connection
               if($link === false){
                 die("ERROR: Could not connect. " . mysql_connect_error());

@@ -12,9 +12,9 @@ session_start();
 $GLOBALS['config'] = array(
     'mysql' => array(
         'host' => '127.0.0.1',
-        'username' => 'root',
-        'password' => 'password',
-        'db' => 'ivertise_africa'
+        'username' => 'amn_stocker',
+        'password' => 'Token2016',
+        'db' => 'amn_stocker'
         ),
     'remember' => array(
         'cookie_name' => 'hash',

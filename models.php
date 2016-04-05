@@ -100,8 +100,7 @@ select.form-control{width:120px !important;
         </form>
 </header>
   <div class="stock_box">
-  <form name="contactus" method="post">
-
+  <form name="refined" action="search.php" method="post">
   <div class="col-md-2 stock_left">
 
       <section class="sky-form">
@@ -175,11 +174,13 @@ select.form-control{width:120px !important;
       <option value="5">71 - 80</option>
       </select>
       </div>   
-    </section>
-       <input type="submit" name="contact-submit" value="Search" />
+    </section>       
+                       
+        <button type="submit" value="submit">Click Me!</button>
+
 
   </div>
-  </div>
+
 
 </form>
 
@@ -201,26 +202,24 @@ select.form-control{width:120px !important;
             [
 <?php
             /* Attempt MySQL server connection. Assuming you are running MySQL
-            server with default setting (user 'root' with no password) */
-            $link = mysql_connect("localhost", "mjedevel_kev", "Token2016");
-            mysql_select_db( "mjedevel_ia", $link);
+            server with default setting (user 'root' with no password) */            mysql_select_db( "mjedevel_ia", $link);
             // Check connection
             if ($link === false) {
                 die("ERROR: Could not connect. " . mysql_connect_error());
             }
             //declaring variable
-            $input = @$_POST["search_text"];
-            $gender = @$_POST["search_gender"];
-            $nationality = @$_POST["search_nationality"];
-            $country = @$_POST["search_country"];
-            $age = @$_POST["search_age"];
-            $height = @$_POST["search_height"];
-            $waist = @$_POST["search_waist"];
+             $input = $_POST["search_text"];
+            $gender = $_POST["search_gender"];
+            $nationality = $_POST["search_nationality"];
+            $country = $_POST["search_country"];
+            $age = $_POST["search_age"];
+            $height = $_POST["search_height"];
+            $waist = $_POST["search_waist"];
             // Attempt select query execution 
             $sql = "SELECT * FROM images WHERE genre LIKE 'models'";
-            $sql2 = "SELECT * FROM images WHERE keywords LIKE '$input' AND genre LIKE 'models' ";
+            $sql2 = "SELECT * FROM images WHERE keywords LIKE '$input' OR keywords LIKE '$gender' OR keywords LIKE '$nationality' OR keywords LIKE '$country' OR keywords LIKE '$age' OR keywords LIKE '$height' AND genre LIKE 'models' ";
             $sql3 = "SELECT * FROM images WHERE keywords='$gender' OR keywords='$nationality'  AND genre LIKE 'models' ";
-            if (!empty(@$_POST['model-submit'])) {
+            if (!empty($_POST['model-submit'])) {
                 if ($result = mysql_query($sql2, $link)) {
                     if (mysql_num_rows($result) > 0) {
                         while ($row = mysql_fetch_array($result)) {
@@ -291,7 +290,7 @@ select.form-control{width:120px !important;
 
                     }
                 }
-            } else if (!empty(@$_POST['contact-submit'])) {
+            } else if (!empty($_POST['contact-submit'])) {
                 if ($result = mysql_query($sql3, $link)) {
                     if (mysql_num_rows($result) > 0) {
                         while ($row = mysql_fetch_array($result)) {

@@ -1,7 +1,7 @@
 <?php
 $host = "localhost";
-$db_name = "mjedevel_ia";
-$username = "mjedevel_kev";
+$db_name = "amn_stocker";
+$username = "amn_stocker";
 $password = "Token2016";
 
 try {

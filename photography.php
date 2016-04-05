@@ -173,7 +173,7 @@ require_once 'templates/header.php'; ?>
             $sql = "SELECT * FROM images WHERE genre LIKE 'photography'";
             $sql2 = "SELECT * FROM images WHERE keywords LIKE '$input' AND genre LIKE 'photography' ";
             $sql3 = "SELECT * FROM images WHERE keywords='$gender' OR keywords='$nationality'  AND genre LIKE 'photography' ";
-            if (!empty(@$_POST['model-submit'])) {
+            if (!empty($_POST['model-submit'])) {
                 if ($result = mysql_query($sql2, $link)) {
                     if (mysql_num_rows($result) > 0) {
                         while ($row = mysql_fetch_array($result)) {
@@ -243,7 +243,7 @@ require_once 'templates/header.php'; ?>
 
                     }
                 }
-            } else if (!empty(@$_POST['contact-submit'])) {
+            } else if (!empty($_POST['contact-submit'])) {
                 if ($result = mysql_query($sql3, $link)) {
                     if (mysql_num_rows($result) > 0) {
                         while ($row = mysql_fetch_array($result)) {

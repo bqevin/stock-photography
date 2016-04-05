@@ -12,9 +12,9 @@ session_start();
 $GLOBALS['config'] = array(
     'mysql' => array(
         'host' => 'localhost',
-        'username' => 'mjedevel_kev',
-        'password' => 'Token2016',
-        'db' => 'mjedevel_ia'
+        'username' => 'root',
+        'password' => '',
+        'db' => 'tweets'
         ),
     'remember' => array(
         'cookie_name' => 'hash',
@@ -31,7 +31,7 @@ spl_autoload_register(function($class){
 require_once 'classes/'.$class.'.php';
 });
 
-require_once'functions/sanitize.php';
+require_once 'functions/sanitize.php';
 
 //This part::Initiallize Autologin based on set remember me ***Cookies magic
 if (Cookie::exists(Config::get('remember/cookie_name')) && !Session::exists(Config::get('session/session_name'))) {
@@ -45,21 +45,4 @@ if (Cookie::exists(Config::get('remember/cookie_name')) && !Session::exists(Conf
         $user->login(); //NB: not perfectly logging in despite everything being right. Resolution:Sought later
         //echo $hashCheck->first()->user_id;
     }
-}
-
-function getBaseUrl() {
-    // output: /myproject/index.php
-    $currentPath = $_SERVER['PHP_SELF']; 
-    
-    // output: Array ( [dirname] => /myproject [basename] => index.php [extension] => php [filename] => index ) 
-    $pathInfo = pathinfo($currentPath); 
-    
-    // output: localhost
-    $hostName = $_SERVER['HTTP_HOST']; 
-    
-    // output: http://
-    $protocol = strtolower(substr($_SERVER["SERVER_PROTOCOL"],0,5))=='https://'?'https://':'http://';
-    
-    // return: http://localhost/myproject/
-    return $protocol.$hostName.$pathInfo['dirname']."/";
 }

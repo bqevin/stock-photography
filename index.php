@@ -156,9 +156,9 @@ li{list-style:none !important;}
         <div class="content">
           <section id="stock">
 <?php
-                    $link = mysql_connect("localhost", "mjedevel_kev", "Token2016");
+                    $link = mysql_connect("127.0.0.1", "amn_stocker", "Token2016");
                     
-                    mysql_select_db( "mjedevel_ia", $link);
+                    mysql_select_db( "amn_stocker", $link);
                     
                     // Check connection
                     if($link === false){
@@ -224,9 +224,9 @@ li{list-style:none !important;}
 
           <section id="photography">
  <?php
-                  $link = mysql_connect("localhost", "mjedevel_kev", "Token2016");
+                  $link = mysql_connect("127.0.0.1", "amn_stocker", "Token2016");
                   
-                  mysql_select_db( "mjedevel_ia", $link);
+                  mysql_select_db( "amn_stocker", $link);
                   
                   // Check connection
                   if($link === false){
@@ -291,9 +291,9 @@ li{list-style:none !important;}
           </section>
           <section id="models">
 <?php
-                  $link = mysql_connect("localhost", "mjedevel_kev", "Token2016");
+                  $link = mysql_connect("localhost", "amn_stocker", "Token2016");
                   
-                  mysql_select_db( "mjedevel_ia", $link);
+                  mysql_select_db( "amn_stocker", $link);
                   
                   // Check connection
                   if($link === false){
@@ -358,9 +358,9 @@ li{list-style:none !important;}
           </section>
           <section id="mua">
 <?php
-                  $link = mysql_connect("localhost", "mjedevel_kev", "Token2016");
+                  $link = mysql_connect("localhost", "amn_stocker", "Token2016");
                   
-                  mysql_select_db( "mjedevel_ia", $link);
+                  mysql_select_db( "amn_stocker", $link);
                   
                   // Check connection
                   if($link === false){

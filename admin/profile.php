@@ -1,371 +1,557 @@
-<?php
-    require_once 'includes/templates/header.php';
-?>
+<?php require("templates/header.php") ?>
 
-  <body>
+</head>
 
-  <body>
 
-  <section id="container" >
-      <!-- **********************************************************************************************************************************************************
-      TOP BAR CONTENT & NOTIFICATIONS
-      *********************************************************************************************************************************************************** -->
-      <!--header start-->
-      <header class="header black-bg">
-              <div class="sidebar-toggle-box">
-                  <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+<body class="nav-md">
+
+  <div class="container body">
+
+
+    <div class="main_container">
+
+      <!--Sidebar Starts here-->
+      <?php require("templates/sidebar.php") ?>
+      <!--Sidebar Ends here-->
+
+      <!--Sidebar Starts here-->
+      <?php require("templates/menu.php") ?>
+      <!--Sidebar Ends here-->
+
+      <!-- page content -->
+      <div class="right_col" role="main">
+
+        <div class="">
+          <div class="page-title">
+            <div class="title_left">
+              <h3>User Profile</h3>
+            </div>
+
+            <div class="title_right">
+              <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Search for...">
+                  <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">Go!</button>
+                        </span>
+                </div>
               </div>
-            <!--logo start-->
-            <a href="index.html" class="logo"><b>IvertAfrica</b></a>
-            <!--logo end-->
-            <div class="nav notify-row" id="top_menu">
-                <!--  notification start -->
-                <ul class="nav top-menu">
-                    <!-- settings start -->
-
-                    <!-- settings end -->
-                    <!-- inbox dropdown start-->
-                    <li id="header_inbox_bar" class="dropdown">
-                        <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
-                            <i class="fa fa-envelope-o"></i>
-                            <span class="badge bg-theme">5</span>
-                        </a>
-                        <ul class="dropdown-menu extended inbox">
-                            <div class="notify-arrow notify-arrow-green"></div>
-                            <li>
-                                <p class="green">You have 5 new messages</p>
-                            </li>
-                            <li>
-                                <a href="index.html#">
-                                    <span class="photo"><img alt="avatar" src="../assets/img/ui-zac.jpg"></span>
-                                    <span class="subject">
-                                    <span class="from">Adminr</span>
-                                    <span class="time">Just now</span>
-                                    </span>
-                                    <span class="message">
-                                        Hi mate, how is everything?
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="index.html#">
-                                    <span class="photo"><img alt="avatar" src="../assets/img/ui-divya.jpg"></span>
-                                    <span class="subject">
-                                    <span class="from">Divya Manian</span>
-                                    <span class="time">40 mins.</span>
-                                    </span>
-                                    <span class="message">
-                                     Hi, I need your help with this.
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="index.html#">
-                                    <span class="photo"><img alt="avatar" src="../assets/img/ui-danro.jpg"></span>
-                                    <span class="subject">
-                                    <span class="from">Dan Rogers</span>
-                                    <span class="time">2 hrs.</span>
-                                    </span>
-                                    <span class="message">
-                                        Love your new Dashboard.
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="index.html#">
-                                    <span class="photo"><img alt="avatar" src="../assets/img/ui-sherman.jpg"></span>
-                                    <span class="subject">
-                                    <span class="from">Dj Sherman</span>
-                                    <span class="time">4 hrs.</span>
-                                    </span>
-                                    <span class="message">
-                                        Please, answer asap.
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="index.html#">See all messages</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <!-- inbox dropdown end -->
-                </ul>
-                <!--  notification end -->
             </div>
-            <div class="top-menu">
-              <ul class="nav pull-right top-menu">
-              <li><a class="logout glyphicon glyphicon-shopping-cart" href="cart.html">Cart</a></li>
-                    <li><a class="logout" href="isignin.html">Logout</a></li>
-              </ul>
-            </div>
-        </header>
-      <!--header end-->
-
-      <!-- **********************************************************************************************************************************************************
-      MAIN SIDEBAR MENU
-      *********************************************************************************************************************************************************** -->
-
-      <!--sidebar start-->
-
-<aside>
-          <div id="sidebar"  class="nav-collapse ">
-              <!-- sidebar menu start-->
-              <ul class="sidebar-menu" id="nav-accordion">
-
-                  <p class="centered"><a href="profile.html"><img src="../assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
-                  <h5 class="centered">Eric Caleb | 25yrs</h5>
-
-                  <li class="mt">
-                      <a href="index.html">
-                          <i class="fa fa-dashboard"></i>
-                          <span>Profile</span>
-                      </a>
-                  </li>
-
-                  <li class="sub-menu">
-                      <a href="javascript:;" >
-                          <i class="fa fa-desktop"></i>
-                          <span>Payment</span>
-                      </a>
-                      <ul class="sub">
-                          <li><a  href="general.html">MPESA</a></li>
-                          <li><a  href="buttons.html">Paypal</a></li>
-                          <li><a  href="panels.html">Visa</a></li>
-                      </ul>
-                  </li>
-
-                  <li class="sub-menu">
-                      <a class="active" href="javascript:;" >
-                          <i class="fa fa-cogs"></i>
-                          <span>Gallery</span>
-                      </a>
-                      <ul class="sub">
-
-                          <li class="active"><a  href="gallery.html">Gallery</a></li>
-
-                      </ul>
-                  </li>
-                  <li class="sub-menu">
-                      <a href="javascript:;" >
-                          <i class="fa fa-book"></i>
-                          <span>Extra Pages</span>
-                      </a>
-                      <ul class="sub">
-                          <li><a  href="blank.html">Blank Page</a></li>
-                          <li><a  href="login.html">Login</a></li>
-                          <li><a  href="lock_screen.html">Lock Screen</a></li>
-                      </ul>
-                  </li>
-
-
-
-
-              </ul>
-              <!-- sidebar menu end-->
           </div>
-      </aside>
-      <!--sidebar end-->
+          <div class="clearfix"></div>
+          <?php 
+          if(isset($_GET['user'])) {
+               $servername = "localhost";
+                $username = "root";
+                $password = "";
+                $dbname = "tweets";
 
+                // Create connection
+                $conn = new mysqli($servername, $username, $password, $dbname);
+                // Check connection
+                if ($conn->connect_error) {
+                     die("Connection failed: " . $conn->connect_error);
+                } 
+                $user = $_GET['user'];
+                $sql = "SELECT * FROM uri WHERE screen_name = '$user'";
+                $result = $conn->query($sql);
+                if ($result->num_rows > 0) {
+                    while($row = $result->fetch_assoc()) {
+                      //Collect all profile details 
+                      $name = $row["name"];
+                      $prof = $row["profile_image_url"] ;
+                      $prof = str_replace("_normal","",$prof);
+                      $location = $row["location"];
+                      $desc = $row["description"];
+                      //$tweets = $row["tweet"];
+                      $handle = $row["screen_name"];
+                      //$time =$row["composed_time"];
+                    }
+                    ?>
+          <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="x_panel">
+                <div class="x_title">
+                  <h2>User Report <small>Activity report</small></h2>
+                  <ul class="nav navbar-right panel_toolbox">
+                    <li><a href="#"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Settings 1</a>
+                        </li>
+                        <li><a href="#">Settings 2</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li><a href="#"><i class="fa fa-close"></i></a>
+                    </li>
+                  </ul>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
 
+                  <div class="col-md-3 col-sm-3 col-xs-12 profile_left">
 
-        </section><! --/wrapper -->
-      </section><!-- /MAIN CONTENT -->
-      <section id="main-content">
-          <section class="wrapper site-min-height">
-            <link href="http://fontawesome.io/../assets/font-awesome/css/font-awesome.css" rel="stylesheet" media="screen">
-<div class="container">
-    <div class="row user-menu-container square">
-        <div class="col-md-7 user-details">
-            <div class="row coralbg white">
-                <div class="col-md-6 no-pad">
-                    <div class="user-pad">
-                        <h3>Welcome back, Eric</h3>
-                        <h4 class="white"><i class="fa fa-check-circle-o"></i> Hong Kong, China</h4>
-                        <h4 class="white"><i class="fa fa-twitter"></i> me</h4>
-                        <button type="button" class="btn btn-labeled btn-info" href="#">
-                            <span class="btn-label"><i class="fa fa-pencil"></i></span>Update</button>
-                    </div>
-                </div>
-                <div class="col-md-6 no-pad">
-                    <div class="user-image">
-                        <img src="https://farm7.staticflickr.com/6163/6195546981_200e87ddaf_b.jpg" class="img-responsive thumbnail">
-                    </div>
-                </div>
-            </div>
-            <div class="row overview">
-                <div class="col-md-4 user-pad text-center">
-                    <h3>Uploads</h3>
-                    <h4>2,784</h4>
-                </div>
-                <div class="col-md-4 user-pad text-center">
-                    <h3>Downloads</h3>
-                    <h4>456</h4>
-                </div>
-                <div class="col-md-4 user-pad text-center">
-                    <h3>APPRECIATIONS</h3>
-                    <h4>4,901</h4>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-1 user-menu-btns">
-            <div class="btn-group-vertical square" id="responsive">
-                <a href="#" class="btn btn-block btn-default active">
-                  <i class="fa fa-bell-o fa-3x"></i>
-                </a>
-                <a href="#" class="btn btn-default">
-                  <i class="fa fa-envelope-o fa-3x"></i>
-                </a>
-                <a href="#" class="btn btn-default">
-                  <i class="fa fa-laptop fa-3x"></i>
-                </a>
-                <a href="#" class="btn btn-default">
-                  <i class="fa fa-cloud-upload fa-3x"></i>
-                </a>
-            </div>
-        </div>
-        <div class="col-md-4 user-menu user-pad">
-            <div class="user-menu-content active">
-                <h3>
-                    Recent Interactions
-                </h3>
-                <ul class="user-menu-list">
-                    <li>
-                        <h4><i class="fa fa-user coral"></i> Roselynn Downloaded your Image.</h4>
-                    </li>
-                    <li>
-                        <h4><i class="fa fa-heart-o coral"></i> Jonathan Hawkins Appreciated you.</h4>
-                    </li>
-                    <li>
-                        <h4><i class="fa fa-paper-plane-o coral"></i> Gracie Jenkins Downloaded Image.</h4>
-                    </li>
-                    <li>
-                        <button type="button" class="btn btn-labeled btn-success" href="#">
-                            <span class="btn-label"><i class="fa fa-bell-o"></i></span>View all activity</button>
-                    </li>
-                </ul>
-            </div>
-            <div class="user-menu-content">
-                <h3>
-                    Your Inbox
-                </h3>
-                <ul class="user-menu-list">
-                    <li>
-                        <h4>From Roselyn Smith <small class="coral"><strong>NEW</strong> <i class="fa fa-clock-o"></i> 7:42 A.M.</small></h4>
-                    </li>
-                    <li>
-                        <h4>From Jonathan Hawkins <small class="coral"><i class="fa fa-clock-o"></i> 10:42 A.M.</small></h4>
-                    </li>
-                    <li>
-                        <h4>From Georgia Jennings <small class="coral"><i class="fa fa-clock-o"></i> 10:42 A.M.</small></h4>
-                    </li>
-                    <li>
-                        <button type="button" class="btn btn-labeled btn-danger" href="#">
-                            <span class="btn-label"><i class="fa fa-envelope-o"></i></span>View All Messages</button>
-                    </li>
-                </ul>
-            </div>
-            <div class="user-menu-content">
-                <h3>
-                    Trending
-                </h3>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="view">
-                            <div class="caption">
-                                <p>47LabsDesign</p>
-                                <a href="" rel="tooltip" title="Appreciate"><span class="fa fa-heart-o fa-2x"></span></a>
-                                <a href="" rel="tooltip" title="View"><span class="fa fa-search fa-2x"></span></a>
+                    <div class="profile_img">
+
+                      <!-- end of image cropping -->
+                      <div id="crop-avatar">
+                        <!-- Current avatar -->
+                        <div class="avatar-view" title="Change the avatar">
+                          <img src="<?php echo $prof ?>" alt="Avatar">
+                        </div>
+
+                        <!-- Cropping modal -->
+                        <div class="modal fade" id="avatar-modal" aria-hidden="true" aria-labelledby="avatar-modal-label" role="dialog" tabindex="-1">
+                          <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                              <form class="avatar-form" action="crop.php" enctype="multipart/form-data" method="post">
+                                <div class="modal-header">
+                                  <button class="close" data-dismiss="modal" type="button">&times;</button>
+                                  <h4 class="modal-title" id="avatar-modal-label">Change Avatar</h4>
+                                </div>
+                                <div class="modal-body">
+                                  <div class="avatar-body">
+
+                                    <!-- Upload image and data -->
+                                    <div class="avatar-upload">
+                                      <input class="avatar-src" name="avatar_src" type="hidden">
+                                      <input class="avatar-data" name="avatar_data" type="hidden">
+                                      <label for="avatarInput">Local upload</label>
+                                      <input class="avatar-input" id="avatarInput" name="avatar_file" type="file">
+                                    </div>
+
+                                    <!-- Crop and preview -->
+                                    <div class="row">
+                                      <div class="col-md-9">
+                                        <div class="avatar-wrapper"></div>
+                                      </div>
+                                      <div class="col-md-3">
+                                        <div class="avatar-preview preview-lg"></div>
+                                        <div class="avatar-preview preview-md"></div>
+                                        <div class="avatar-preview preview-sm"></div>
+                                      </div>
+                                    </div>
+
+                                    <div class="row avatar-btns">
+                                      <div class="col-md-9">
+                                        <div class="btn-group">
+                                          <button class="btn btn-primary" data-method="rotate" data-option="-90" type="button" title="Rotate -90 degrees">Rotate Left</button>
+                                          <button class="btn btn-primary" data-method="rotate" data-option="-15" type="button">-15deg</button>
+                                          <button class="btn btn-primary" data-method="rotate" data-option="-30" type="button">-30deg</button>
+                                          <button class="btn btn-primary" data-method="rotate" data-option="-45" type="button">-45deg</button>
+                                        </div>
+                                        <div class="btn-group">
+                                          <button class="btn btn-primary" data-method="rotate" data-option="90" type="button" title="Rotate 90 degrees">Rotate Right</button>
+                                          <button class="btn btn-primary" data-method="rotate" data-option="15" type="button">15deg</button>
+                                          <button class="btn btn-primary" data-method="rotate" data-option="30" type="button">30deg</button>
+                                          <button class="btn btn-primary" data-method="rotate" data-option="45" type="button">45deg</button>
+                                        </div>
+                                      </div>
+                                      <div class="col-md-3">
+                                        <button class="btn btn-primary btn-block avatar-save" type="submit">Done</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- <div class="modal-footer">
+                                                  <button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+                                                </div> -->
+                              </form>
                             </div>
-                            <img src="http://24.media.tumblr.com/273167b30c7af4437dcf14ed894b0768/tumblr_n5waxesawa1st5lhmo1_1280.jpg" class="img-responsive">
+                          </div>
                         </div>
-                        <div class="info">
-                            <p class="small" style="text-overflow: ellipsis">An Awesome Title</p>
-                            <p class="small coral text-right"><i class="fa fa-clock-o"></i> Posted Today | 10:42 A.M.</small>
-                        </div>
-                        <div class="stats turqbg">
-                            <span class="fa fa-heart-o"> <strong>47</strong></span>
-                            <span class="fa fa-eye pull-right"> <strong>137</strong></span>
-                        </div>
+                        <!-- /.modal -->
+
+                        <!-- Loading state -->
+                        <div class="loading" aria-label="Loading" role="img" tabindex="-1"></div>
+                      </div>
+                      <!-- end of image cropping -->
+
                     </div>
-                    <div class="col-md-6">
-                        <div class="view">
-                            <div class="caption">
-                                <p>47LabsDesign</p>
-                                <a href="" rel="tooltip" title="Appreciate"><span class="fa fa-heart-o fa-2x"></span></a>
-                                <a href="" rel="tooltip" title="View"><span class="fa fa-search fa-2x"></span></a>
-                            </div>
-                            <img src="http://24.media.tumblr.com/282fadab7d782edce9debf3872c00ef1/tumblr_n3tswomqPS1st5lhmo1_1280.jpg" class="img-responsive">
+                    <h3><?php echo $name?></h3>
+
+                    <ul class="list-unstyled user_data">
+                      <li><i class="fa fa-map-marker user-profile-icon"></i> <?php echo $location?></li>
+                      <li><i class="fa fa-briefcase user-profile-icon"></i> <?php echo $desc?></li>
+                     <!--  <li class="m-top-xs">
+                        <i class="fa fa-external-link user-profile-icon"></i>
+                        <a href="#" target="_blank"></a>
+                      </li> -->
+                    </ul>
+
+                   <!--  <a class="btn btn-success"><i class="fa fa-edit m-right-xs"></i>Edit Profile</a> -->
+                    <br />
+
+                    <!-- start hategauge -->
+                    <h4>Hatewords Mostly Used</h4>
+                    <ul class="list-unstyled user_data">
+                      <li>
+                        <p>kihii</p>
+                        <div class="progress progress_sm">
+                          <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="50"></div>
                         </div>
-                        <div class="info">
-                            <p class="small" style="text-overflow: ellipsis">An Awesome Title</p>
-                            <p class="small coral text-right"><i class="fa fa-clock-o"></i> Posted Today | 10:42 A.M.</small>
+                      </li>
+                      <li>
+                        <p>hate you</p>
+                        <div class="progress progress_sm">
+                          <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="70"></div>
                         </div>
-                        <div class="stats turqbg">
-                            <span class="fa fa-heart-o"> <strong>47</strong></span>
-                            <span class="fa fa-eye pull-right"> <strong>137</strong></span>
+                      </li>
+                      <li>
+                        <p>rudi kwenu</p>
+                        <div class="progress progress_sm">
+                          <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="30"></div>
                         </div>
+                      </li>
+                      <li>
+                        <p>mlafi</p>
+                        <div class="progress progress_sm">
+                          <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="50"></div>
+                        </div>
+                      </li>
+                    </ul>
+                    <!-- end of hategauge -->
+
+                  </div>
+                  <div class="col-md-9 col-sm-9 col-xs-12">
+
+                    <div class="profile_title">
+                      <div class="col-md-6">
+                        <h2>User Activity Report</h2>
+                      </div>
+                      <div class="col-md-6">
+                        <div id="reportrange" class="pull-right" style="margin-top: 5px; background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #E6E9ED">
+                          <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+                          <span>December 30, 2014 - January 28, 2015</span> <b class="caret"></b>
+                        </div>
+                      </div>
                     </div>
+                    <!-- start of user-activity-graph -->
+                    <div id="graph_bar" style="width:100%; height:280px;"></div>
+                    <!-- end of user-activity-graph -->
+
+                    <div class="" role="tabpanel" data-example-id="togglable-tabs">
+                      <ul id="myTab" class="nav nav-tabs bar_tabs" role="tablist">
+                        <li role="presentation" class="active"><a href="#tab_content1" id="home-tab" role="tab" data-toggle="tab" aria-expanded="true">Recent Activity</a>
+                        </li>
+                        <li role="presentation" class=""><a href="#tab_content2" role="tab" id="profile-tab" data-toggle="tab" aria-expanded="false">Projects Worked on</a>
+                        </li>
+                        <li role="presentation" class=""><a href="#tab_content3" role="tab" id="profile-tab2" data-toggle="tab" aria-expanded="false">Profile</a>
+                        </li>
+                      </ul>
+                      
+                      <div id="myTabContent" class="tab-content">
+                        <div role="tabpanel" class="tab-pane fade active in" id="tab_content1" aria-labelledby="home-tab">
+
+                          <!-- start recent activity -->
+                          <div id="scores">
+                          <ul class="messages">
+                          <?php
+                           $t = "SELECT tweet,composed_time FROM uri WHERE screen_name = '$user' ORDER BY composed_time DESC LIMIT 3";
+                            $result = $conn->query($t);
+                            if ($result->num_rows > 0) {
+                                while($row2 = $result->fetch_assoc()) {
+                                  //Collect tweet plus time composed 
+                                  $tweets = $row2["tweet"];
+                                  $time =$row2["composed_time"];
+                                
+                          ?>
+                            <li class="animated flipInX">
+                              <img src="<?php echo $prof ?>" class="avatar" alt="Avatar">
+                              <div class="message_date">
+                                <h3 class="date text-info"><?php echo substr($time,4,4)?></h3>
+                                <p class="month"><?php echo substr($time,7,12)?></p>
+                              </div>
+                              <div class="message_wrapper">
+                                <h4 class="heading">@<?php echo $handle ?></h4>
+                                <blockquote class="message"><?php echo $tweets ?></blockquote>
+                                <br />
+                                <p class="url">
+                                  <span class="fs1 text-info" aria-hidden="true" data-icon=""></span>
+                                  <a href="#"><i class="fa fa-paperclip"></i> Push as hatred message </a>
+                                </p>
+                              </div>
+                            </li>
+                            <?php
+                                }
+                              }
+                            ?>
+                           <!--  <li>
+                              <img src="images/img.jpg" class="avatar" alt="Avatar">
+                              <div class="message_date">
+                                <h3 class="date text-error">21</h3>
+                                <p class="month">May</p>
+                              </div>
+                              <div class="message_wrapper">
+                                <h4 class="heading">Brian Michaels</h4>
+                                <blockquote class="message">Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua butcher retro keffiyeh dreamcatcher synth.</blockquote>
+                                <br />
+                                <p class="url">
+                                  <span class="fs1" aria-hidden="true" data-icon=""></span>
+                                  <a href="#" data-original-title="No idea">Download</a>
+                                </p>
+                              </div>
+                            </li> -->
+                          
+
+                          </ul>
+                          </div>
+                          <!-- end recent activity -->
+
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="tab_content2" aria-labelledby="profile-tab">
+
+                          <!-- start user projects -->
+                          <table class="data table table-striped no-margin">
+                            <thead>
+                              <tr>
+                                <th>#</th>
+                                <th>Project Name</th>
+                                <th>Client Company</th>
+                                <th class="hidden-phone">Hours Spent</th>
+                                <th>Contribution</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1</td>
+                                <td>New Company Takeover Review</td>
+                                <td>CloudCore Technologies</td>
+                                <td class="hidden-phone">18</td>
+                                <td class="vertical-align-mid">
+                                  <div class="progress">
+                                    <div class="progress-bar progress-bar-success" data-transitiongoal="35"></div>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>2</td>
+                                <td>New Partner Contracts Consultanci</td>
+                                <td>CloudCore Technologies</td>
+                                <td class="hidden-phone">13</td>
+                                <td class="vertical-align-mid">
+                                  <div class="progress">
+                                    <div class="progress-bar progress-bar-danger" data-transitiongoal="15"></div>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>3</td>
+                                <td>Partners and Inverstors report</td>
+                                <td>CloudCore Technologies</td>
+                                <td class="hidden-phone">30</td>
+                                <td class="vertical-align-mid">
+                                  <div class="progress">
+                                    <div class="progress-bar progress-bar-success" data-transitiongoal="45"></div>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>4</td>
+                                <td>New Company Takeover Review</td>
+                                <td>CloudCore Technologies</td>
+                                <td class="hidden-phone">28</td>
+                                <td class="vertical-align-mid">
+                                  <div class="progress">
+                                    <div class="progress-bar progress-bar-success" data-transitiongoal="75"></div>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <!-- end user projects -->
+
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="tab_content3" aria-labelledby="profile-tab">
+                          <p><?php echo $desc?></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+              </div>
             </div>
-            <div class="user-menu-content">
-                <h2 class="text-center">
-                    START SHARING
-                </h2>
-                <center><i class="fa fa-cloud-upload fa-4x"></i></center>
-                <div class="share-links">
-                    <center><button type="button" class="btn btn-lg btn-labeled btn-success" href="#" style="margin-bottom: 15px;">
-                            <span class="btn-label"><i class="fa fa-bell-o"></i></span>A FINISHED PROJECT
-                    </button></center>
-                    <center><button type="button" class="btn btn-lg btn-labeled btn-warning" href="#">
-                            <span class="btn-label"><i class="fa fa-bell-o"></i></span>A WORK IN PROGRESS
-                    </button></center>
-                </div>
-            </div>
+          </div>
         </div>
+          <?php 
+                } else {
+                     echo "Somemthing went wrong";
+                }
+
+                $conn->close();
+          }?>
+        <!-- footer content -->
+       <?php require("templates/footer.php") ?>
+        <!-- /footer content -->
+
+      </div>
+      <!-- /page content -->
     </div>
-</div>
-            </section>
-            </section>
-      <!--main content end-->
-<?php
-    require_once 'includes/templates/footer.php';
-?>
-    <!--script for this page-->
+
+  </div>
+
+  <div id="custom_notifications" class="custom-notifications dsp_none">
+    <ul class="list-unstyled notifications clearfix" data-tabbed_notifications="notif-group">
+    </ul>
+    <div class="clearfix"></div>
+    <div id="notif-group" class="tabbed_notifications"></div>
+  </div>
+  <script type="text/javascript">
+    var $scores = $("#scores");
+    setInterval(function () {
+        $scores.load("profile.php?user=<?php echo $handle?> #scores");
+    }, 60000);
+  </script>
+  <script src="js/bootstrap.min.js"></script>
+  
+  <!-- bootstrap progress js -->
+  <script src="js/progressbar/bootstrap-progressbar.min.js"></script>
+  <script src="js/nicescroll/jquery.nicescroll.min.js"></script>
+  <!-- icheck -->
+  <script src="js/icheck/icheck.min.js"></script>
+
+  <script src="js/custom.js"></script>
+
+  <!-- image cropping -->
+  <script src="js/cropping/cropper.min.js"></script>
+  <script src="js/cropping/main.js"></script>
+
+  <!-- daterangepicker -->
+  <script type="text/javascript" src="js/moment/moment.min.js"></script>
+  <script type="text/javascript" src="js/datepicker/daterangepicker.js"></script>
+
+  <!-- chart js -->
+  <script src="js/chartjs/chart.min.js"></script>
+
+  <!-- moris js -->
+  <script src="js/moris/raphael-min.js"></script>
+  <script src="js/moris/morris.min.js"></script>
+
+  <!-- pace -->
+  <script src="js/pace/pace.min.js"></script>
 
   <script>
-      //custom select box
-
-      $(function(){
-          $('select.styled').customSelect();
+    $(function() {
+      var day_data = [{
+        "period": "Jan",
+        "Hours worked": 80
+      }, {
+        "period": "Feb",
+        "Hours worked": 125
+      }, {
+        "period": "Mar",
+        "Hours worked": 176
+      }, {
+        "period": "Apr",
+        "Hours worked": 224
+      }, {
+        "period": "May",
+        "Hours worked": 265
+      }, {
+        "period": "Jun",
+        "Hours worked": 314
+      }, {
+        "period": "Jul",
+        "Hours worked": 347
+      }, {
+        "period": "Aug",
+        "Hours worked": 287
+      }, {
+        "period": "Sep",
+        "Hours worked": 240
+      }, {
+        "period": "Oct",
+        "Hours worked": 211
+      }];
+      Morris.Bar({
+        element: 'graph_bar',
+        data: day_data,
+        xkey: 'period',
+        hideHover: 'auto',
+        barColors: ['#26B99A', '#34495E', '#ACADAC', '#3498DB'],
+        ykeys: ['Hours worked', 'sorned'],
+        labels: ['Hours worked', 'SORN'],
+        xLabelAngle: 60
       });
-      $(document).ready(function() {
-    var $btnSets = $('#responsive'),
-    $btnLinks = $btnSets.find('a');
-
-    $btnLinks.click(function(e) {
-        e.preventDefault();
-        $(this).siblings('a.active').removeClass("active");
-        $(this).addClass("active");
-        var index = $(this).index();
-        $("div.user-menu>div.user-menu-content").removeClass("active");
-        $("div.user-menu>div.user-menu-content").eq(index).addClass("active");
     });
-});
-
-$( document ).ready(function() {
-    $("[rel='tooltip']").tooltip();
-
-    $('.view').hover(
-        function(){
-            $(this).find('.caption').slideDown(250); //.fadeIn(250)
-        },
-        function(){
-            $(this).find('.caption').slideUp(250); //.fadeOut(205)
-        }
-    );
-});
-
   </script>
+  <!-- datepicker -->
+  <script type="text/javascript">
+    $(document).ready(function() {
 
-  </body>
+      var cb = function(start, end, label) {
+        console.log(start.toISOString(), end.toISOString(), label);
+        $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+        //alert("Callback has fired: [" + start.format('MMMM D, YYYY') + " to " + end.format('MMMM D, YYYY') + ", label = " + label + "]");
+      }
+
+      var optionSet1 = {
+        startDate: moment().subtract(29, 'days'),
+        endDate: moment(),
+        minDate: '01/01/2012',
+        maxDate: '12/31/2015',
+        dateLimit: {
+          days: 60
+        },
+        showDropdowns: true,
+        showWeekNumbers: true,
+        timePicker: false,
+        timePickerIncrement: 1,
+        timePicker12Hour: true,
+        ranges: {
+          'Today': [moment(), moment()],
+          'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+          'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+          'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+          'This Month': [moment().startOf('month'), moment().endOf('month')],
+          'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+        },
+        opens: 'left',
+        buttonClasses: ['btn btn-default'],
+        applyClass: 'btn-small btn-primary',
+        cancelClass: 'btn-small',
+        format: 'MM/DD/YYYY',
+        separator: ' to ',
+        locale: {
+          applyLabel: 'Submit',
+          cancelLabel: 'Clear',
+          fromLabel: 'From',
+          toLabel: 'To',
+          customRangeLabel: 'Custom',
+          daysOfWeek: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
+          monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+          firstDay: 1
+        }
+      };
+      $('#reportrange span').html(moment().subtract(29, 'days').format('MMMM D, YYYY') + ' - ' + moment().format('MMMM D, YYYY'));
+      $('#reportrange').daterangepicker(optionSet1, cb);
+      $('#reportrange').on('show.daterangepicker', function() {
+        console.log("show event fired");
+      });
+      $('#reportrange').on('hide.daterangepicker', function() {
+        console.log("hide event fired");
+      });
+      $('#reportrange').on('apply.daterangepicker', function(ev, picker) {
+        console.log("apply event fired, start/end dates are " + picker.startDate.format('MMMM D, YYYY') + " to " + picker.endDate.format('MMMM D, YYYY'));
+      });
+      $('#reportrange').on('cancel.daterangepicker', function(ev, picker) {
+        console.log("cancel event fired");
+      });
+      $('#options1').click(function() {
+        $('#reportrange').data('daterangepicker').setOptions(optionSet1, cb);
+      });
+      $('#options2').click(function() {
+        $('#reportrange').data('daterangepicker').setOptions(optionSet2, cb);
+      });
+      $('#destroy').click(function() {
+        $('#reportrange').data('daterangepicker').remove();
+      });
+    });
+  </script>
+  <!-- /datepicker -->
+</body>
+
 </html>

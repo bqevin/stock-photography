@@ -1,10 +1,6 @@
 <?php
 require_once 'core/init.php';
-if (Session::exists('home')) {
-    echo "<p>";
-    echo Session::flash('home');
-    echo "</p>";
-}
+
 if (Input::exists()) {
     if (Token::check(Input::get('token'))) {
         $validate = new Validate();
@@ -30,77 +26,129 @@ if (Input::exists()) {
         }
     }
 }
+
 ?>
-<?php include_once('../admin/inc/header.inc.php');?>
-<style type="text/css">
-input{border:1px solid #177856 !important;
-      border-radius:5px !important;
+<!DOCTYPE html>
+<html lang="en">
 
-}
-.button{
-	background-color:white !important;
-	border:1px solid #177856 !important;
-	color:black !important;
-	border-radius:5px;
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- Meta, title, CSS, favicons, etc. -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Ajibika Online | Welcome</title>
+
+  <!-- Bootstrap core CSS -->
+
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="fonts/css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/animate.min.css" rel="stylesheet">
+
+  <!-- Custom styling plus plugins -->
+  <link href="css/custom.css" rel="stylesheet">
+  <link href="css/icheck/flat/green.css" rel="stylesheet">
 
 
-}
+  <script src="js/jquery.min.js"></script>
 
+  <!--[if lt IE 9]>
+        <script src="../assets/js/ie8-responsive-file-warning.js"></script>
+        <![endif]-->
 
-a{color:#177856;}
-</style>
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
 </head>
-<body>
-    <div class="container">
-        <div class="row text-center ">
-            <div class="col-md-12">
-                <br /><br />
-                <h1><img src="logo.png"></h1>
-                 <br />
-            </div>
-        </div>
-         <div class="row ">
-               
-                  <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                        <i class="fa fa-user"></i> Log in
-                            </div>
-                            <div class="panel-body">
-                                <form role="form" action="" method="post">
-                                       <br />
-                                     <div class="form-group input-group">
-                                            
-                                            <input type="text" name="username" class="form-control" placeholder="Your Username " />
-                                        </div>
-                                                                              <div class="form-group input-group">
-                                            
-                                            <input type="password" name="password" class="form-control"  placeholder="Your Password" />
-                                        </div>
-                                    <div class="form-group">
-                                            <label class="checkbox-inline">
-                                                <input type="checkbox" name="remember" /> Remember me
-                                            </label>
-                                            <span class="pull-right">
-                                                   <a href="#" >Forget password ? </a> 
-                                            </span>
-                                        </div>
-                          
-                                     <input type="hidden" name="token" value="<?php echo Token::generate();?>">
-                                     <button class="button btn-primary " type="submit" name="" value="Login">Login</button>
-                                    <hr />
-                                    
-                                    </form>
-                            </div>
-                           
-                        </div>
-                    </div>
-                
-                
-        </div>
-    </div>
 
-<?php include_once('../admin/inc/footer_scripts.inc.php'); ?>
-   
+<body style="background:#F7F7F7;">
+
+  <div class="">
+    <a class="hiddenanchor" id="toregister"></a>
+    <a class="hiddenanchor" id="tologin"></a>
+
+    <div id="wrapper">
+      <div id="login" class="animate form">
+        <section class="login_content">
+          <form action="" method="post">
+            <h1>Login Form</h1>
+            <div>
+              <input type="text" name="username" class="form-control" placeholder="Username"  />
+            </div>
+            <div>
+              <input type="password" name="password" class="form-control" placeholder="Password"  />
+            </div>
+            <div>
+              <input type="checkbox" name="remember"  autocomplete="off" id="remember"> Remember
+            </div>
+            <div>
+              <input type="hidden" name="token" value="<?php echo Token::generate();?>">
+            </div>
+            <div>
+              <input class="btn btn-default submit" type="submit"  value="Log In">
+              <a class="reset_pass" href="#">Lost your password?</a>
+            </div>
+            <div class="clearfix"></div>
+            <div class="separator">
+
+              <p class="change_link">New to site?
+                <a href="#toregister" class="to_register"> Create Account </a>
+              </p>
+              <div class="clearfix"></div>
+              <br />
+              <div>
+               <h1><i class="fa fa-paw" style="font-size: 26px;"></i> Ajibika Online!</h1>
+                <p>&copy;<?php echo date("Y"); ?> All Rights Reserved. Created by: CloudCore Technologies. Privacy and Terms</p>
+              </div>
+            </div>
+          </form>
+          <!-- form -->
+        </section>
+        <!-- content -->
+      </div>
+      <div id="register" class="animate form">
+        <section class="login_content">
+          <form>
+            <h1>Create Account</h1>
+            <div>
+              <input type="text" class="form-control" placeholder="Username" required="" />
+            </div>
+            <div>
+              <input type="email" class="form-control" placeholder="Email" required="" />
+            </div>
+            <div>
+              <input type="password" class="form-control" placeholder="Password" required="" />
+            </div>
+            <input type="hidden" name="token" value="<?php echo Token::generate();?>">
+            <div>
+              <input class="btn btn-default submit" value="Register">
+            </div>
+            <div class="clearfix"></div>
+            <div class="separator">
+              <p class="change_link">Already a member ?
+                <a href="#tologin" class="to_register"> Log in </a>
+              </p>
+              <div class="clearfix"></div>
+              <br />
+              <div>
+                <h1><i class="fa fa-paw" style="font-size: 26px;"></i> Ajibika Online!</h1>
+                
+                <p>&copy;<?php echo date("Y"); ?> All Rights Reserved. Created by: CloudCore Technologies. Privacy and Terms</p>
+              </div>
+            </div>
+          </form>
+          <!-- form -->
+        </section>
+        <!-- content -->
+      </div>
+    </div>
+  </div>
+
 </body>
+
 </html>

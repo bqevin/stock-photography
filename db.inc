@@ -2,7 +2,7 @@
 
 // These are the DBMS credentials
 $hostName = "localhost";
-$username = "mjedevel_kev";
+$username = "amn_stocker";
 $password = "Token2016";
 
 // Show an error and stop the script
