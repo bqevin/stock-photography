@@ -4,9 +4,9 @@ require_once 'templates/header.php'; ?>
     <link rel="stylesheet" type="text/css" href="less/css/default.css" />
     <link rel="stylesheet" type="text/css" href="less/css/component.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://npmcdn.com/flickity@1.1/dist/flickity.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@1.1/dist/flickity.css">
     <script src="less/js/modernizr.custom.js"></script>
-    <script src="https://npmcdn.com/flickity@1.1/dist/flickity.pkgd.js"></script>
+    <script src="https://unpkg.com/flickity@1.1/dist/flickity.pkgd.js"></script>
   </head>
   <style type="text/css">
    #side{margin-left:270px;}
