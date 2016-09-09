@@ -48,7 +48,7 @@
     <!-- Custom styles for this template -->
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/style-responsive.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://npmcdn.com/flickity@1.1/dist/flickity.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@1.1/dist/flickity.css">
     <link href='https://fonts.googleapis.com/css?family=Lato:400,300,100,700,900' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="ivert.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
